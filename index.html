@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f1e7">
+  <meta name="description" content="Jelajahi informasi Mata Hati Cafe Blitar: menu, galeri, cerita kafe, lokasi, dan reservasi.">
+  <title>Beranda | Mata Hati Cafe Blitar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .home-intro { padding: 64px 0 76px; }
+    .home-hero { display:grid; grid-template-columns: 1.02fr .98fr; gap: clamp(28px,5vw,72px); align-items:center; }
+    .home-copy h1 { font-size:clamp(3rem,6.3vw,5.7rem); line-height:1.02; margin:20px 0 22px; }
+    .home-copy h1 em { color:var(--brown); font-weight:500; }
+    .home-copy p { color:var(--muted); max-width:530px; font-size:1.05rem; }
+    .home-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+    .home-image { position:relative; min-height:450px; border-radius:4px; overflow:hidden; background:var(--cream-deep); }
+    .home-image img { width:100%; height:100%; min-height:450px; object-fit:cover; }
+    .image-note { position:absolute; left:18px; right:18px; bottom:18px; padding:17px 20px; background:rgba(255,253,248,.94); backdrop-filter:blur(8px); }
+    .image-note strong { display:block; font-family:var(--serif); font-size:1.3rem; font-weight:500; }
+    .image-note span { color:var(--muted); font-size:.86rem; }
+    .page-directory { padding:72px 0 86px; background:var(--paper); border-top:1px solid var(--line); }
+    .directory-heading { display:flex; justify-content:space-between; align-items:end; gap:25px; margin-bottom:32px; }
+    .directory-heading h2 { max-width:590px; margin-bottom:0; }
+    .directory-heading p { max-width:370px; color:var(--muted); margin-bottom:5px; }
+    .directory-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:17px; }
+    .directory-card { display:flex; flex-direction:column; min-height:300px; padding:22px; border:1px solid var(--line); background:var(--cream); transition:transform .25s,box-shadow .25s; }
+    .directory-card:hover { transform:translateY(-5px); box-shadow:var(--shadow); }
+    .directory-card img { width:100%; height:135px; object-fit:cover; margin-bottom:19px; }
+    .directory-number { color:var(--brown); font-size:.72rem; letter-spacing:.14em; font-weight:700; }
+    .directory-card h3 { font-family:var(--serif); font-size:1.45rem; font-weight:500; margin:7px 0 8px; }
+    .directory-card p { color:var(--muted); font-size:.88rem; margin-bottom:16px; }
+    .directory-link { margin-top:auto; color:var(--brown-dark); font-weight:700; font-size:.86rem; }
+    .visit-strip { padding:56px 0; }
+    .visit-box { display:flex; justify-content:space-between; align-items:center; gap:24px; padding:34px 38px; background:var(--brown-dark); color:#fffaf2; }
+    .visit-box h2 { font-size:clamp(1.9rem,3.4vw,3rem); margin:8px 0 10px; }
+    .visit-box p { color:rgba(255,250,242,.75); margin:0; max-width:580px; }
+    .visit-box .eyebrow { color:#d8c3a7; }
+    @media(max-width:900px){.directory-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.home-hero{grid-template-columns:1fr}.home-image,.home-image img{min-height:360px}.directory-heading{display:block}.directory-heading p{margin-top:18px}.visit-box{align-items:flex-start;flex-direction:column}}
+    @media(max-width:520px){.home-intro{padding:40px 0 52px}.home-copy h1{font-size:3.1rem}.home-image,.home-image img{min-height:300px}.directory-grid{grid-template-columns:1fr}.directory-card{min-height:unset}.directory-card img{height:180px}.visit-box{padding:28px 23px}.home-actions .btn{width:100%}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navigasi utama">
+      <a class="brand" href="index.html" aria-label="Mata Hati Cafe, beranda"><span class="brand-mark">mh</span><span class="brand-name"><strong>Mata Hati Cafe</strong><small>Blitar · Coffee &amp; Kitchen</small></span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka navigasi" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Beranda</a><a href="menu.html">Menu</a><a href="galeri.html">Galeri</a><a href="tentang.html">Tentang</a><a href="kunjungi.html">Lokasi</a><a class="btn nav-cta" href="kunjungi.html#reservasi">Rencanakan kunjungan <span class="arrow">↗</span></a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="home-intro"><div class="container home-hero">
+      <div class="home-copy reveal"><span class="eyebrow">Mata Hati Cafe · Kota Blitar</span><h1>Temukan jeda,<br><em>rasakan cerita.</em></h1><p>Secangkir kopi, hidangan favorit, dan waktu yang terasa lebih pelan. Kenali Mata Hati Cafe melalui menu, galeri suasana, informasi kafe, dan panduan kunjungan.</p><div class="home-actions"><a class="btn" href="menu.html">Jelajahi menu <span class="arrow">↗</span></a><a class="btn btn-outline" href="kunjungi.html">Informasi kunjungan <span class="arrow">↗</span></a></div></div>
+      <div class="home-image reveal delay-1"><img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1200&q=85" alt="Ilustrasi suasana coffee shop yang hangat"><div class="image-note"><strong>Ruang untuk menikmati momen.</strong><span>Untuk obrolan panjang, waktu sendiri, dan pertemuan sederhana.</span></div></div>
+    </div></section>
+    <section class="page-directory"><div class="container"><div class="directory-heading reveal"><div><span class="eyebrow">Jelajahi website</span><h2>Semua yang ingin kamu tahu, ada di sini.</h2></div><p>Pilih halaman sesuai yang ingin kamu lihat. Setiap bagian memiliki halaman tersendiri agar informasi lebih lengkap dan mudah ditemukan.</p></div>
+      <div class="directory-grid">
+        <a class="directory-card reveal" href="menu.html"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=80" alt="Ilustrasi kopi di atas meja" loading="lazy"><span class="directory-number">01 / MENU</span><h3>Makanan &amp; Minuman</h3><p>Jelajahi pilihan menu dan tanyakan harga serta ketersediaan terbarunya.</p><span class="directory-link">Lihat menu ↗</span></a>
+        <a class="directory-card reveal delay-1" href="galeri.html"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80" alt="Ilustrasi area duduk restoran" loading="lazy"><span class="directory-number">02 / GALERI</span><h3>Lihat Suasananya</h3><p>Intip inspirasi suasana, sajian, dan momen yang bisa kamu nikmati.</p><span class="directory-link">Buka galeri ↗</span></a>
+        <a class="directory-card reveal delay-2" href="tentang.html"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=700&q=80" alt="Ilustrasi interior kafe" loading="lazy"><span class="directory-number">03 / TENTANG</span><h3>Cerita Mata Hati</h3><p>Kenali gambaran pengalaman dan suasana yang ditawarkan kafe.</p><span class="directory-link">Kenali kami ↗</span></a>
+        <a class="directory-card reveal" href="kunjungi.html"><img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=700&q=80" alt="Ilustrasi ruang kafe untuk berkumpul" loading="lazy"><span class="directory-number">04 / KUNJUNGAN</span><h3>Lokasi &amp; Reservasi</h3><p>Cek petunjuk lokasi dan hubungi kafe sebelum merencanakan kunjungan.</p><span class="directory-link">Rencanakan kunjungan ↗</span></a>
+      </div><p class="subtle" style="margin-top:20px">Catatan: foto di halaman ini merupakan ilustrasi, bukan dokumentasi resmi Mata Hati Cafe.</p>
+    </div></section>
+    <section class="visit-strip"><div class="container visit-box reveal"><div><span class="eyebrow">Waktunya mampir</span><h2>Jadikan hari ini lebih hangat.</h2><p>Ajak teman, keluarga, atau datang untuk menikmati waktu sendiri. Buka halaman lokasi untuk melihat peta dan menghubungi kafe.</p></div><a class="btn btn-light" href="kunjungi.html">Lihat lokasi &amp; kontak <span class="arrow">↗</span></a></div></section>
+  </main>
+  <footer><div class="container"><div class="footer-main"><a class="brand" href="index.html"><span class="brand-mark">mh</span><span class="brand-name"><strong>Mata Hati Cafe</strong><small>Blitar · Coffee &amp; Kitchen</small></span></a><div class="footer-links"><a href="index.html">Beranda</a><a href="menu.html">Menu</a><a href="galeri.html">Galeri</a><a href="tentang.html">Tentang</a><a href="kunjungi.html">Lokasi</a><a href="https://www.instagram.com/matahatiblitar/" target="_blank" rel="noopener">Instagram ↗</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> Mata Hati Cafe. Dirancang dengan hangat.</span><span>Jl. Veteran No. 14 · Kota Blitar</span></div></div></footer>
+  <a class="whatsapp-float" href="https://wa.me/628113661316" target="_blank" rel="noopener" aria-label="Hubungi Mata Hati Cafe melalui WhatsApp">☏ WhatsApp</a>
+  <script src="assets/script.js"></script>
+</body>
+</html>
